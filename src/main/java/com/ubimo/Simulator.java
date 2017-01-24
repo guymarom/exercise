@@ -15,6 +15,10 @@ public class Simulator {
   private final String[] itemPool;
   private final ScheduledExecutorService executorService = Executors.newScheduledThreadPool(4);
 
+  /**
+   * A sample main application that starts an addition cycle, after 5 seconds starts another one and after 5
+   * more seconds stops the entire process.
+   */
   public static void main(final String[] args) throws InterruptedException {
     final Simulator simulator = new Simulator(new ConcurrentMapItemCollection(), "a", "b", "c", "d");
     simulator.start();
